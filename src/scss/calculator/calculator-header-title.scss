@@ -1,0 +1,10 @@
+.calculator-header-title {
+  @extend %flexCenterCenter;
+  width: 60%;
+  height: 100%;
+}
+
+.calculator-header-title__text {
+  color: $headerFontColor;
+  font-size: $headerFontSize;
+}

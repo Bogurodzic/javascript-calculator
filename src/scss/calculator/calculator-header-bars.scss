@@ -1,0 +1,10 @@
+.calculator-header-bars {
+ @extend %flexCenterCenter;
+ width: 20%;
+ height: 100%;
+}
+
+.calculator-header-bars__item {
+  color: $headerFontColor;
+  font-size: $headerFontSize;
+}

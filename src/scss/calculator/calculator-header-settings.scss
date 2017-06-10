@@ -1,0 +1,11 @@
+.calculator-header-settings {
+  width: 20%;
+  height: 100%;
+
+  @extend %flexCenterCenter;
+}
+
+.calculator-header-settings__item {
+  color: $headerFontColor;
+  font-size: $headerFontSize;
+}

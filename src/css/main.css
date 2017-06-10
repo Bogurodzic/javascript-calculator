@@ -35,6 +35,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.calculator-header {
+  display: flex; }
+
+.calculator-header-bars, .calculator-header-title, .calculator-header-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .wrapper {
   background: url("/img/background.jpg") center center;
   height: 100vh;
@@ -53,3 +61,27 @@ table {
   background: #83C785;
   width: 100%;
   height: 50px; }
+
+.calculator-header-bars {
+  width: 20%;
+  height: 100%; }
+
+.calculator-header-bars__item {
+  color: white;
+  font-size: 16px; }
+
+.calculator-header-title {
+  width: 60%;
+  height: 100%; }
+
+.calculator-header-title__text {
+  color: white;
+  font-size: 16px; }
+
+.calculator-header-settings {
+  width: 20%;
+  height: 100%; }
+
+.calculator-header-settings__item {
+  color: white;
+  font-size: 16px; }
