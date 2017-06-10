@@ -1,0 +1,21 @@
+.calculator-body-buttons-small {
+  width: 100%;
+  height: 30px;
+  margin-top: 30px;
+
+  @extend %flex;
+  justify-content: space-around;
+}
+
+.calculator-body-buttons-small__button {
+  width: 17.5%;
+  height: 100%;
+  background: $buttonBackgroundColor;
+  color:$buttonColor;
+
+  @extend %flexCenterCenter;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
