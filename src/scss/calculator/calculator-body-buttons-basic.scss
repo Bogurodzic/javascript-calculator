@@ -1,13 +1,13 @@
-.calculator-body-buttons-small {
+.calculator-body-buttons-basic {
   width: 100%;
-  height: 35px;
-  margin-top: 30px;
+  height: 45px;
+  margin-top: 10px;
 
   @extend %flex;
   justify-content: space-around;
 }
 
-.calculator-body-buttons-small__button {
+.calculator-body-buttons-basic__button {
   width: 18.5%;
   height: 100%;
   background: $buttonBackgroundColor;

@@ -35,10 +35,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.calculator-header, .calculator-body-buttons-small {
+.calculator-header, .calculator-body-buttons-small, .calculator-body-buttons-basic {
   display: flex; }
 
-.calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button {
+.calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button, .calculator-body-buttons-basic__button {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -96,14 +96,28 @@ table {
 
 .calculator-body-buttons-small {
   width: 100%;
-  height: 30px;
+  height: 35px;
   margin-top: 30px;
   justify-content: space-around; }
 
 .calculator-body-buttons-small__button {
-  width: 17.5%;
+  width: 18.5%;
   height: 100%;
   background: #F7F7F7;
   color: black; }
   .calculator-body-buttons-small__button:hover {
+    cursor: pointer; }
+
+.calculator-body-buttons-basic {
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  justify-content: space-around; }
+
+.calculator-body-buttons-basic__button {
+  width: 18.5%;
+  height: 100%;
+  background: #F7F7F7;
+  color: black; }
+  .calculator-body-buttons-basic__button:hover {
     cursor: pointer; }
