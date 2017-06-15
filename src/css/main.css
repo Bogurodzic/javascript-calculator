@@ -35,10 +35,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.calculator-header, .calculator-body-buttons-small, .calculator-body-buttons-basic {
+.calculator-header, .calculator-body-buttons-small, .calculator-body-buttons-basic, .calculator-body-buttons-bottom {
   display: flex; }
 
-.calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button, .calculator-body-buttons-basic__button {
+.calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button, .calculator-body-buttons-basic__button, .calculator-body-buttons-bottom-secondblock, .calculator-body-buttons-bottom-secondblock__button {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -120,4 +120,22 @@ table {
   background: #F7F7F7;
   color: black; }
   .calculator-body-buttons-basic__button:hover {
+    cursor: pointer; }
+
+.calculator-body-buttons-bottom-firstblock {
+  width: 75%; }
+
+.calculator-body-buttons-bottom-secondblock {
+  width: 25%;
+  height: 80px;
+  margin-top: 10px;
+  justify-content: flex-end; }
+
+.calculator-body-buttons-bottom-secondblock__button {
+  width: 74%;
+  height: 100%;
+  background: #F7F7F7;
+  color: black;
+  margin-right: 9px; }
+  .calculator-body-buttons-bottom-secondblock__button:hover {
     cursor: pointer; }

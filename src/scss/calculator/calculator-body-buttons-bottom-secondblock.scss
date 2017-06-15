@@ -1,0 +1,22 @@
+.calculator-body-buttons-bottom-secondblock {
+  width: 25%;
+  height: 80px;
+  margin-top: 10px;
+
+  @extend %flexCenterCenter;
+  justify-content: flex-end;
+}
+
+.calculator-body-buttons-bottom-secondblock__button {
+  width: 74%;
+  height: 100%;
+  background: $buttonBackgroundColor;
+  color:$buttonColor;
+  margin-right: 9px;
+
+  @extend %flexCenterCenter;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
