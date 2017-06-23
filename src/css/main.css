@@ -35,10 +35,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.calculator-header, .calculator-body-buttons-small, .calculator-body-buttons-basic, .calculator-body-buttons-bottom {
+.calculator-header, .calculator-body-buttons-small, .calculator-body-buttons-basic, .calculator-body-buttons-bottom, .calculator-body-buttons-bottom-firstblock {
   display: flex; }
 
-.calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button, .calculator-body-buttons-basic__button, .calculator-body-buttons-bottom-secondblock, .calculator-body-buttons-bottom-secondblock__button {
+.calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button, .calculator-body-buttons-basic__button, .calculator-body-buttons-bottom-firstblock__top-button, .calculator-body-buttons-bottom-firstblock__bottom-button, .calculator-body-buttons-bottom-secondblock, .calculator-body-buttons-bottom-secondblock__button {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -123,7 +123,34 @@ table {
     cursor: pointer; }
 
 .calculator-body-buttons-bottom-firstblock {
-  width: 75%; }
+  width: 75%;
+  height: 80px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.calculator-body-buttons-bottom-firstblock__top-button {
+  height: 42%;
+  background: #F7F7F7;
+  color: black; }
+  .calculator-body-buttons-bottom-firstblock__top-button:nth-child(1) {
+    width: 60%; }
+  .calculator-body-buttons-bottom-firstblock__top-button:nth-child(2) {
+    width: 30%; }
+  .calculator-body-buttons-bottom-firstblock__top-button:hover {
+    cursor: pointer; }
+
+.calculator-body-buttons-bottom-firstblock__bottom-button {
+  height: 42%;
+  background: #F7F7F7;
+  color: black; }
+  .calculator-body-buttons-bottom-firstblock__bottom-button:nth-child(3) {
+    width: 25%; }
+  .calculator-body-buttons-bottom-firstblock__bottom-button:nth-child(4) {
+    width: 65%; }
+  .calculator-body-buttons-bottom-firstblock__bottom-button:hover {
+    cursor: pointer; }
 
 .calculator-body-buttons-bottom-secondblock {
   width: 25%;

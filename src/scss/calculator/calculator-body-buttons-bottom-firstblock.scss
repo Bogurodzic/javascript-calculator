@@ -1,3 +1,52 @@
 .calculator-body-buttons-bottom-firstblock {
   width: 75%;
+
+  height: 80px;
+  margin-top: 10px;
+
+  @extend %flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.calculator-body-buttons-bottom-firstblock__top-button {
+
+  height: 42%;
+  background: $buttonBackgroundColor;
+  color:$buttonColor;
+
+  &:nth-child(1){
+   width: 60%;
+ }
+
+ &:nth-child(2){
+  width: 30%;
+ }
+
+  @extend %flexCenterCenter;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.calculator-body-buttons-bottom-firstblock__bottom-button {
+  height: 42%;
+  background: $buttonBackgroundColor;
+  color:$buttonColor;
+
+  &:nth-child(3){
+   width: 25%;
+  }
+
+ &:nth-child(4){
+   width: 65%;
+  }
+
+  @extend %flexCenterCenter;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
