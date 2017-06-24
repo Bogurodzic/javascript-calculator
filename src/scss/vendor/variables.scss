@@ -1,5 +1,8 @@
 $headerFontColor: white;
 $headerFontSize: 16px;
 
-$buttonBackgroundColor: #F7F7F7;
+$calcOpacity: 0.8;
+
+$buttonBackgroundColor: rgba(211, 211, 211, 1);
+$buttonBackgroundColorOpacity: rgba(211, 211, 211, $calcOpacity);
 $buttonColor: black;

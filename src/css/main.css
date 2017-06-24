@@ -54,11 +54,11 @@ table {
 .calculator {
   width: 300px;
   height: 450px;
-  background: white;
-  opacity: 0.80; }
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1; }
 
 .calculator-header {
-  background: #83C785;
+  background: rgba(131, 199, 133, 0.8);
   width: 100%;
   height: 50px; }
 
@@ -68,7 +68,7 @@ table {
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  background: #fafafa; }
+  background: lightgray; }
 
 .calculator-header-bars {
   width: 20%;
@@ -103,10 +103,11 @@ table {
 .calculator-body-buttons-small__button {
   width: 18.5%;
   height: 100%;
-  background: #F7F7F7;
+  background: lightgray;
   color: black; }
   .calculator-body-buttons-small__button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: rgba(211, 211, 211, 0.8); }
 
 .calculator-body-buttons-basic {
   width: 100%;
@@ -117,10 +118,11 @@ table {
 .calculator-body-buttons-basic__button {
   width: 18.5%;
   height: 100%;
-  background: #F7F7F7;
+  background: lightgray;
   color: black; }
   .calculator-body-buttons-basic__button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: rgba(211, 211, 211, 0.8); }
 
 .calculator-body-buttons-bottom-firstblock {
   width: 75%;
@@ -132,25 +134,27 @@ table {
 
 .calculator-body-buttons-bottom-firstblock__top-button {
   height: 42%;
-  background: #F7F7F7;
+  background: lightgray;
   color: black; }
   .calculator-body-buttons-bottom-firstblock__top-button:nth-child(1) {
     width: 60%; }
   .calculator-body-buttons-bottom-firstblock__top-button:nth-child(2) {
     width: 30%; }
   .calculator-body-buttons-bottom-firstblock__top-button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: rgba(211, 211, 211, 0.8); }
 
 .calculator-body-buttons-bottom-firstblock__bottom-button {
   height: 42%;
-  background: #F7F7F7;
+  background: lightgray;
   color: black; }
   .calculator-body-buttons-bottom-firstblock__bottom-button:nth-child(3) {
     width: 25%; }
   .calculator-body-buttons-bottom-firstblock__bottom-button:nth-child(4) {
     width: 65%; }
   .calculator-body-buttons-bottom-firstblock__bottom-button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: rgba(211, 211, 211, 0.8); }
 
 .calculator-body-buttons-bottom-secondblock {
   width: 25%;
@@ -161,8 +165,9 @@ table {
 .calculator-body-buttons-bottom-secondblock__button {
   width: 74%;
   height: 100%;
-  background: #F7F7F7;
+  background: lightgray;
   color: black;
   margin-right: 9px; }
   .calculator-body-buttons-bottom-secondblock__button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: rgba(211, 211, 211, 0.8); }

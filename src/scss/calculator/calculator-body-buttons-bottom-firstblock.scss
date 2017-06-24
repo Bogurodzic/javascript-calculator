@@ -28,6 +28,7 @@
 
   &:hover {
     cursor: pointer;
+    background: $buttonBackgroundColorOpacity;
   }
 }
 
@@ -48,5 +49,6 @@
 
   &:hover {
     cursor: pointer;
+    background: $buttonBackgroundColorOpacity;
   }
 }
