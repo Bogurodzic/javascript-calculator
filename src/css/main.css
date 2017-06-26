@@ -71,8 +71,8 @@ table {
   background: lightgray; }
 
 .active-button {
-  box-shadow: 2px 2px 5px #888888;
-  transform: translateX(2px) translateY(2px);
+  box-shadow: 2px -2px 5px #888888;
+  transform: translateX(-2px) translateY(2px);
   transition: 0.1s all; }
 
 .calculator-header-bars {
