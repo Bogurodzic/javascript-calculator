@@ -8,8 +8,17 @@ window.onload = function(){
     },
 
     concatNumbers: function(){
-      let screen = Number(this.currentNumber.join(""));
+      if (this.currentNumber.length !== 0){
+        let screen = Number(this.currentNumber.join(""));
         return screen;
+      } else {
+        return "";
+      }
+    },
+
+    clear: function(){
+      this.currentNumber = [];
+      this.displayCurrentNumber();
     },
 
     displayNumber: function(num){
@@ -39,5 +48,10 @@ window.onload = function(){
     data.addEventListener("click", function(){
       button.onClick(this);
     });
+  });
+
+  let del = document.getElementById("delete");
+  del.addEventListener("click", function(){
+    screen.clear();
   });
 }
