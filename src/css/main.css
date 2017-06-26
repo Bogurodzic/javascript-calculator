@@ -38,7 +38,7 @@ table {
 .calculator-header, .calculator-body-buttons-small, .calculator-body-buttons-basic, .calculator-body-buttons-bottom, .calculator-body-buttons-bottom-firstblock {
   display: flex; }
 
-.calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button, .calculator-body-buttons-basic__button, .calculator-body-buttons-bottom-firstblock__top-button, .calculator-body-buttons-bottom-firstblock__bottom-button, .calculator-body-buttons-bottom-secondblock, .calculator-body-buttons-bottom-secondblock__button {
+.calculator-body-screen, .calculator-header-bars, .calculator-header-title, .calculator-header-settings, .calculator-body-buttons-small__button, .calculator-body-buttons-basic__button, .calculator-body-buttons-bottom-firstblock__top-button, .calculator-body-buttons-bottom-firstblock__bottom-button, .calculator-body-buttons-bottom-secondblock, .calculator-body-buttons-bottom-secondblock__button {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -69,6 +69,11 @@ table {
   margin-top: 15px;
   margin-bottom: 15px;
   background: lightgray; }
+
+.active-button {
+  box-shadow: 2px 2px 5px #888888;
+  transform: translateX(2px) translateY(2px);
+  transition: 0.1s all; }
 
 .calculator-header-bars {
   width: 20%;
