@@ -1,6 +1,7 @@
 window.onload = function(){
   let screen = {
     currentNumber: [],
+    dotFlag: false,
     display: document.getElementById("display"),
 
     displayCurrentNumber: function(){
@@ -23,7 +24,13 @@ window.onload = function(){
 
     displayNumber: function(num){
       this.display.innerText = num;
-    }
+    },
+
+    addDot: function(){
+      if (this.currentNumber.length !== 0 & this.dotFlag === false){
+        this.currentNumber.push(".");
+      }
+    },
   }
 
   let button = {
@@ -53,5 +60,10 @@ window.onload = function(){
   let del = document.getElementById("delete");
   del.addEventListener("click", function(){
     screen.clear();
+  });
+
+  let dot = document.getElementById("dot");
+  dot.addEventListener("click", function(){
+    screen.addDot();
   });
 }
