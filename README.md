@@ -1,7 +1,7 @@
 # Javascript Calculator
 
-This is one of freecodecamp project. 
-
+This is one of freecodecamp project.
+In the future I'll do the React version of the calculator for comparision vanila js and React. (;
 
 ## Site functionality
 
