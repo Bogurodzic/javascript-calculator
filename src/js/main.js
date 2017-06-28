@@ -11,8 +11,8 @@ window.onload = function(){
 
     clear: function(){
       this.currentNumber = 0;
-      this.displayCurrentNumber();
-      this.changeDotFlag(false);
+      this.display.innerText = "";
+      //this.changeDotFlag(false);
     },
 
     updateCurrentNumber: function(num){
@@ -71,7 +71,7 @@ window.onload = function(){
 
   let del = document.getElementById("delete");
   del.addEventListener("click", function(){
-    //screen.clear();
+    screen.clear();
   });
 
   let dot = document.getElementById("dot");
