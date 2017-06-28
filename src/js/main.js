@@ -1,27 +1,27 @@
 window.onload = function(){
   let screen = {
-    currentNumber: [],
+    currentNumber: 0,
     secondNumber: 0,
     dotFlag: false,
     display: document.getElementById("display"),
 
     displayCurrentNumber: function(){
-      this.displayNumber(this.concatNumbers());
-    },
-
-    concatNumbers: function(){
-      if (this.currentNumber.length !== 0){
-        let screen = this.currentNumber.join("");
-        return screen;
-      } else {
-        return "";
-      }
+      this.displayNumber(this.currentNumber);
     },
 
     clear: function(){
-      this.currentNumber = [];
+      this.currentNumber = 0;
       this.displayCurrentNumber();
       this.changeDotFlag(false);
+    },
+
+    updateCurrentNumber: function(num){
+      num = Number(num);
+      if(this.currentNumber !== 0){
+        this.currentNumber = (this.currentNumber * 10) + num;
+      } else if (this.currentNumber === 0) {
+        this.currentNumber = num;
+      }
     },
 
     displayNumber: function(num){
@@ -40,13 +40,6 @@ window.onload = function(){
       this.dotFlag = flag;
     },
 
-    transferNumber: function(num){
-      if(num.length > 0){
-        this.secondNumber = num;
-        this.currentNumber = [];
-        console.log(this.secondNumber);
-      }
-    }
 
   }
 
@@ -55,14 +48,15 @@ window.onload = function(){
     onClick: function(but){
       but.classList.toggle("active-button");
       setTimeout(function(){ but.classList.toggle("active-button"); }, 100)
-    },
+    }
+
   }
 
   //Events for displaying buttons number
   let numbers = document.getElementsByClassName("number");
   [].forEach.call(numbers, function(data, index){
     data.addEventListener("click", function(){
-      screen.currentNumber.push(Number(this.innerText));
+      screen.updateCurrentNumber(data.innerHTML);
       screen.displayCurrentNumber();
     });
   });
@@ -77,18 +71,18 @@ window.onload = function(){
 
   let del = document.getElementById("delete");
   del.addEventListener("click", function(){
-    screen.clear();
+    //screen.clear();
   });
 
   let dot = document.getElementById("dot");
   dot.addEventListener("click", function(){
-    screen.addDot();
+    //screen.addDot();
   });
 
   let logicalOparations = document.getElementsByClassName("operations");
   [].forEach.call(logicalOparations, function(data, index){
     data.addEventListener("click", function(){
-    screen.transferNumber(screen.currentNumber);
+    //screen.transferNumber(screen.currentNumber);
     });
   });
 }
