@@ -36,6 +36,11 @@ window.onload = function(){
       }
     },
 
+    transferNumber: function(num){
+      this.secondNumber = num;
+      this.currentNumber = 0;
+    }
+
     changeDotFlag: function(flag){
       this.dotFlag = flag;
     },
@@ -82,7 +87,7 @@ window.onload = function(){
   let logicalOparations = document.getElementsByClassName("operations");
   [].forEach.call(logicalOparations, function(data, index){
     data.addEventListener("click", function(){
-    //screen.transferNumber(screen.currentNumber);
+    screen.transferNumber(screen.currentNumber);
     });
   });
 }
