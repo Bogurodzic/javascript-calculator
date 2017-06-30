@@ -40,7 +40,6 @@ window.onload = function(){
     transferNumber: function(num){
       this.secondNumber = num;
       this.currentNumber = 0;
-      console.log(this.secondNumber);
     },
 
     changeDotFlag: function(flag){
@@ -52,7 +51,6 @@ window.onload = function(){
   let calc = {
     add: function(){
       this.currentNumber = this.currentNumber + this.secondNumber;
-      console.log(this.currentNumber);
     }
   }
 
@@ -95,13 +93,15 @@ window.onload = function(){
   let logicalOparations = document.getElementsByClassName("operations");
   [].forEach.call(logicalOparations, function(data, index){
     data.addEventListener("click", function(){
-    screen.transferNumber(screen.currentNumber);
-    screen.currentOperation = calc.add;
+      let dataAttr = this.getAttribute('data-type');
+      screen.transferNumber(screen.currentNumber);
+      screen.currentOperation = calc[dataAttr];
     });
   });
 
   let result = document.getElementById("result");
   result.addEventListener("click", function(){
     screen.currentOperation();
+    screen.displayCurrentNumber();
   });
 }
