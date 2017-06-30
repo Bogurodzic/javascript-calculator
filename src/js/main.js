@@ -4,6 +4,7 @@ window.onload = function(){
     secondNumber: 0,
     dotFlag: false,
     display: document.getElementById("display"),
+    currentOperation: undefined,
 
     displayCurrentNumber: function(){
       this.displayNumber(this.currentNumber);
@@ -39,13 +40,20 @@ window.onload = function(){
     transferNumber: function(num){
       this.secondNumber = num;
       this.currentNumber = 0;
-    }
+      console.log(this.secondNumber);
+    },
 
     changeDotFlag: function(flag){
       this.dotFlag = flag;
     },
 
+  }
 
+  let calc = {
+    add: function(){
+      this.currentNumber = this.currentNumber + this.secondNumber;
+      console.log(this.currentNumber);
+    }
   }
 
   let button = {
@@ -88,6 +96,12 @@ window.onload = function(){
   [].forEach.call(logicalOparations, function(data, index){
     data.addEventListener("click", function(){
     screen.transferNumber(screen.currentNumber);
+    screen.currentOperation = calc.add;
     });
+  });
+
+  let result = document.getElementById("result");
+  result.addEventListener("click", function(){
+    screen.currentOperation();
   });
 }
