@@ -51,6 +51,10 @@ window.onload = function(){
   let calc = {
     add: function(){
       this.currentNumber = this.currentNumber + this.secondNumber;
+    },
+
+    sub: function(){
+      this.currentNumber = this.secondNumber - this.currentNumber;
     }
   }
 
