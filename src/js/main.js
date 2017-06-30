@@ -55,6 +55,10 @@ window.onload = function(){
 
     sub: function(){
       this.currentNumber = this.secondNumber - this.currentNumber;
+    },
+
+    multiply: function(){
+      this.currentNumber = this.currentNumber * this.secondNumber;
     }
   }
 
