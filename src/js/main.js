@@ -59,7 +59,11 @@ window.onload = function(){
 
     multiply: function(){
       this.currentNumber = this.currentNumber * this.secondNumber;
-    }
+    },
+
+    division: function(){
+      this.currentNumber = this.secondNumber / this.currentNumber;
+    },
   }
 
   let button = {
