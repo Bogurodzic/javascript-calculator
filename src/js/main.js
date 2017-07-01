@@ -64,6 +64,10 @@ window.onload = function(){
     division: function(){
       this.currentNumber = this.secondNumber / this.currentNumber;
     },
+
+    power: function(){
+      this.currentNumber = Math.pow(this.secondNumber, this.currentNumber); 
+    },
   }
 
   let button = {
