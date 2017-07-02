@@ -66,7 +66,11 @@ window.onload = function(){
     },
 
     power: function(){
-      this.currentNumber = Math.pow(this.secondNumber, this.currentNumber); 
+      this.currentNumber = Math.pow(this.secondNumber, this.currentNumber);
+    },
+
+    root: function(){
+      this.currentNumber = Math.sqrt(this.currentNumber);
     },
   }
 
@@ -110,8 +114,15 @@ window.onload = function(){
   [].forEach.call(logicalOparations, function(data, index){
     data.addEventListener("click", function(){
       let dataAttr = this.getAttribute('data-type');
-      screen.transferNumber(screen.currentNumber);
-      screen.currentOperation = calc[dataAttr];
+      let dataInstant = Boolean(this.getAttribute('data-instant'));
+      if(dataInstant === true){
+        console.log("D")
+        let operation = calc[dataAttr];
+        operation.call(screen);
+        screen.displayCurrentNumber();
+      } else {
+        screen.currentOperation = calc[dataAttr];
+      }
     });
   });
 
