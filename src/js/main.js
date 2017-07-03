@@ -72,6 +72,10 @@ window.onload = function(){
     root: function(){
       this.currentNumber = Math.sqrt(this.currentNumber);
     },
+
+    round: function(){
+      this.currentNumber = Math.round(this.currentNumber);
+    }
   }
 
   let button = {
