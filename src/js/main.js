@@ -18,6 +18,13 @@ window.onload = function(){
 
     updateCurrentNumber: function(num){
       num = Number(num);
+      if(this.dotFlag === false ){
+        this.normalUpdate(num);
+      }
+
+    },
+
+    normalUpdate: function(num){
       if(this.currentNumber !== 0){
         this.currentNumber = (this.currentNumber * 10) + num;
       } else if (this.currentNumber === 0) {
@@ -120,12 +127,12 @@ window.onload = function(){
       let dataAttr = this.getAttribute('data-type');
       let dataInstant = Boolean(this.getAttribute('data-instant'));
       if(dataInstant === true){
-        console.log("D")
         let operation = calc[dataAttr];
         operation.call(screen);
         screen.displayCurrentNumber();
       } else {
         screen.currentOperation = calc[dataAttr];
+        screen.transferNumber(screen.currentNumber);
       }
     });
   });
