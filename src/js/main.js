@@ -3,6 +3,7 @@ window.onload = function(){
     currentNumber: 0,
     secondNumber: 0,
     dotFlag: false,
+    dotNumber: 1,
     display: document.getElementById("display"),
     currentOperation: undefined,
 
@@ -13,6 +14,7 @@ window.onload = function(){
     clear: function(){
       this.currentNumber = 0;
       this.display.innerText = "";
+      this.changeDotFlag(false);
       //this.changeDotFlag(false);
     },
 
@@ -20,8 +22,15 @@ window.onload = function(){
       num = Number(num);
       if(this.dotFlag === false ){
         this.normalUpdate(num);
+      } else if (this.dotFlag === true){
+        this.dotUpdate(num);
       }
+      screen.displayCurrentNumber();
+    },
 
+    dotUpdate: function(num){
+      this.currentNumber = this.currentNumber + (num / (10*this.dotNumber));
+      this.dotNumber++;
     },
 
     normalUpdate: function(num){
@@ -34,14 +43,6 @@ window.onload = function(){
 
     displayNumber: function(num){
       this.display.innerText = num;
-    },
-
-    addDot: function(){
-      if (this.currentNumber.length !== 0 & this.dotFlag === false){
-        this.currentNumber.push(".");
-        this.displayCurrentNumber();
-        this.changeDotFlag(true);
-      }
     },
 
     transferNumber: function(num){
@@ -99,7 +100,6 @@ window.onload = function(){
   [].forEach.call(numbers, function(data, index){
     data.addEventListener("click", function(){
       screen.updateCurrentNumber(data.innerHTML);
-      screen.displayCurrentNumber();
     });
   });
 
@@ -118,7 +118,8 @@ window.onload = function(){
 
   let dot = document.getElementById("dot");
   dot.addEventListener("click", function(){
-    //screen.addDot();
+    screen.changeDotFlag(true);
+    console.log(screen.dotFlag);
   });
 
   let logicalOparations = document.getElementsByClassName("operations");
