@@ -85,6 +85,10 @@ window.onload = function(){
 
     round: function(){
       this.currentNumber = Math.round(this.currentNumber);
+    },
+
+    percent: function(){
+      this.currentNumber = this.currentNumber / 100;
     }
   }
 
