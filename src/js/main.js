@@ -29,8 +29,10 @@ window.onload = function(){
     },
 
     dotUpdate: function(num){
-      this.currentNumber = this.currentNumber + (num / (10*this.dotNumber));
-      this.dotNumber++;
+      let dotsAmount = this.dotNumber.toString().split("").length;
+      this.currentNumber = this.currentNumber + (num / (10*this.dotNumber)) ;
+      this.currentNumber = Number(this.currentNumber.toFixed(dotsAmount));
+      this.dotNumber = this.dotNumber * 10;
     },
 
     normalUpdate: function(num){
