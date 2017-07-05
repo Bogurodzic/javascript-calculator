@@ -15,7 +15,7 @@ window.onload = function(){
       this.currentNumber = 0;
       this.display.innerText = "";
       this.changeDotFlag(false);
-      //this.changeDotFlag(false);
+      this.dotNumber = 1;
     },
 
     updateCurrentNumber: function(num){
