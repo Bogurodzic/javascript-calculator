@@ -139,11 +139,20 @@ window.onload = function(){
         operation.call(screen);
         screen.displayCurrentNumber();
       } else {
-        screen.currentOperation = calc[dataAttr];
-        screen.transferNumber(screen.currentNumber);
+        if (screen.nextOperationFlag === true){
+          screen.currentOperation();
+          screen.transferNumber(screen.currentNumber);
+          screen.currentOperation = calc[dataAttr];
+        } else if (screen.nextOperationFlag === false){
+          screen.currentOperation = calc[dataAttr];
+          screen.transferNumber(screen.currentNumber);
+          screen.nextOperationFlag = true;
+        }
       }
     });
   });
+
+
 
   let result = document.getElementById("result");
   result.addEventListener("click", function(){
