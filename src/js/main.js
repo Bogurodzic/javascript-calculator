@@ -2,6 +2,7 @@ window.onload = function(){
   let screen = {
     currentNumber: 0,
     secondNumber: 0,
+    nextOperationFlag: false,
     dotFlag: false,
     dotNumber: 1,
     display: document.getElementById("display"),
@@ -148,5 +149,6 @@ window.onload = function(){
   result.addEventListener("click", function(){
     screen.currentOperation();
     screen.displayCurrentNumber();
+    screen.currentNumber = 0;
   });
 }
