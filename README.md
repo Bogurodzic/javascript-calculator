@@ -3,6 +3,9 @@
 This is one of freecodecamp project.
 In the future I'll do the React version of the calculator for comparision vanila js and React. (;
 
+Live version: [[link]](http://kamiljarzab.pl/Projekty/calculator/)
+
+
 ## Site functionality
 
 * You can add, subtract, multiply, divide, increase, square root
