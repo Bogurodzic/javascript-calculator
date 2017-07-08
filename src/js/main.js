@@ -57,6 +57,10 @@ window.onload = function(){
       this.dotFlag = flag;
     },
 
+    resetNextOperationFlag: function(){
+      this.nextOperationFlag = false;
+    }
+
   }
 
   let calc = {
@@ -121,6 +125,7 @@ window.onload = function(){
   let del = document.getElementById("delete");
   del.addEventListener("click", function(){
     screen.clear();
+    screen.resetNextOperationFlag();
   });
 
   let dot = document.getElementById("dot");
@@ -141,6 +146,7 @@ window.onload = function(){
       } else {
         if (screen.nextOperationFlag === true){
           screen.currentOperation();
+          screen.displayCurrentNumber();
           screen.transferNumber(screen.currentNumber);
           screen.currentOperation = calc[dataAttr];
         } else if (screen.nextOperationFlag === false){
@@ -158,6 +164,7 @@ window.onload = function(){
   result.addEventListener("click", function(){
     screen.currentOperation();
     screen.displayCurrentNumber();
+    screen.resetNextOperationFlag();
     screen.currentNumber = 0;
   });
 }
