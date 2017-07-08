@@ -111,6 +111,8 @@ window.onload = function(){
   [].forEach.call(numbers, function(data, index){
     data.addEventListener("click", function(){
       screen.updateCurrentNumber(data.innerHTML);
+      console.log(screen.currentNumber)
+      console.log(screen.secondNumber)
     });
   });
 
@@ -131,7 +133,6 @@ window.onload = function(){
   let dot = document.getElementById("dot");
   dot.addEventListener("click", function(){
     screen.changeDotFlag(true);
-    console.log(screen.dotFlag);
   });
 
   let logicalOparations = document.getElementsByClassName("operations");
@@ -143,6 +144,9 @@ window.onload = function(){
         let operation = calc[dataAttr];
         operation.call(screen);
         screen.displayCurrentNumber();
+        screen.resetNextOperationFlag();
+        screen.currentNumber = 0;
+        screen.changeDotFlag(false);
       } else {
         if (screen.nextOperationFlag === true){
           screen.currentOperation();
