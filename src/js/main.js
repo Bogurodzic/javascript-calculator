@@ -102,8 +102,7 @@ window.onload = function(){
     onClick: function(but){
       but.classList.toggle("active-button");
       setTimeout(function(){ but.classList.toggle("active-button"); }, 100)
-    }
-
+    },
   }
 
   //Events for displaying buttons number
@@ -111,8 +110,6 @@ window.onload = function(){
   [].forEach.call(numbers, function(data, index){
     data.addEventListener("click", function(){
       screen.updateCurrentNumber(data.innerHTML);
-      console.log(screen.currentNumber)
-      console.log(screen.secondNumber)
     });
   });
 
@@ -163,12 +160,16 @@ window.onload = function(){
   });
 
 
-
   let result = document.getElementById("result");
   result.addEventListener("click", function(){
+    showResult();
+  });
+
+  function showResult(){
     screen.currentOperation();
     screen.displayCurrentNumber();
     screen.resetNextOperationFlag();
     screen.currentNumber = 0;
-  });
+  }
+
 }
